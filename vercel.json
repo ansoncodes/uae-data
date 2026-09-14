@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build && rm -rf dist && mkdir dist && cp -r index.html assets dist/",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

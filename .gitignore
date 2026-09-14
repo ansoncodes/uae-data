@@ -24,3 +24,6 @@ desktop.ini
 # Temp / cache
 .cache/
 *.tmp
+
+# Build output (Vercel)
+dist/
