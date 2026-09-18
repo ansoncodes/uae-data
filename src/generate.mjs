@@ -2,7 +2,7 @@
  * Generates index.html from src/content.mjs.
  * Run: node src/generate.mjs   (then build CSS with Tailwind – see package.json)
  *
- * Page story: attract → build trust → explain the course → show the curriculum →
+ * Page story: attract → show the curriculum → build trust → explain what you learn →
  * show career value → remove doubts → convert. Each block lives in src/sections/.
  */
 import { writeFileSync } from "node:fs";
@@ -12,8 +12,8 @@ import { ROOT } from "./lib/ui.mjs";
 import { head } from "./sections/head.mjs";
 import { header } from "./sections/header.mjs";
 import { heroBlock } from "./sections/hero.mjs"; //          hero · course facts bar · technology marquee
-import { courseBlock } from "./sections/course.mjs"; //      course snapshot · about SMEC · why SMEC
-import { learnBlock } from "./sections/learn.mjs"; //        what you will learn · curriculum explorer
+import { curriculumBlock, journeyBlock } from "./sections/learn.mjs"; // curriculum explorer · what you will learn
+import { whyBlock } from "./sections/why.mjs"; //            why SMEC
 import { practiceBlock } from "./sections/practice.mjs"; //  practical learning · learning experience · tools
 import { careerBlock } from "./sections/career.mjs"; //      career outcomes · certification · trust
 import { convertBlock, floating, footer } from "./sections/convert.mjs"; // FAQ · enquiry · final CTA
@@ -24,8 +24,9 @@ const html = `${head}
 ${header}
 <main id="main">
 ${heroBlock}
-${courseBlock}
-${learnBlock}
+${curriculumBlock}
+${whyBlock}
+${journeyBlock}
 ${practiceBlock}
 ${careerBlock}
 ${convertBlock}

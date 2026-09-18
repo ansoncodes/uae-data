@@ -62,6 +62,7 @@ export const infoBar = [
 
 export const marqueeWords = ["Python", "SQL", "Excel", "R", "Power BI", "Tableau", "Machine Learning", "Gen AI"];
 
+/** `heading`, `intro` and `stats` are not currently shown on the page; `whyLearn*` and `paragraphs` are. */
 export const about = {
   heading: "Building future-ready talent",
   intro:
@@ -84,7 +85,7 @@ export const about = {
   ],
 };
 
-/** "Key Features of the program" – 10 items, brochure page 3. */
+/** "Key Features of the program" – 10 items, brochure page 3. Not currently shown on the page. */
 export const keyFeatures = [
   {
     title: "Industry-aligned curriculum",
@@ -538,7 +539,7 @@ export const moduleShortTitles = {
   "soft-skills": "Soft Skills & Interview Prep",
 };
 
-/** Illustrative analytics pipeline for the practical-learning section (icon keys from tool-icons.mjs). */
+/** Illustrative analytics pipeline. Not currently shown on the page. */
 export const pipeline = [
   { label: "Raw Data", sub: "Excel, CSV & databases", icon: "excel" },
   { label: "Python", sub: "Clean & analyse with pandas", icon: "python" },
@@ -607,7 +608,7 @@ export const toolGroups = [
   { id: "ai", label: "ML & AI", tools: ["sklearn", "genai", "chatgpt", "gemini"] },
 ];
 
-/** Brochure page 5 job-role list (full). The page shows `careerPaths` below. */
+/** Brochure page 5 job-role list (full). Not shown on the page; the FAQ names the roles this curriculum supports. */
 export const jobRoles = [
   "Data Scientist",
   "Data Analyst",
@@ -620,21 +621,6 @@ export const jobRoles = [
   "AI Specialists",
   "NLP Engineer",
   "Computer Vision Engineer",
-];
-
-/**
- * Career paths shown on the page — only brochure roles this syllabus actually supports,
- * each with the curriculum topics it is built on. Deliberately left out: Machine Learning
- * Engineer, AI Engineer, Big Data Engineer, Hadoop/Spark Specialist, NLP Engineer and
- * Computer Vision Engineer, which depend on topics (MLOps, Hadoop/Spark, NLP, computer
- * vision) that are not in this curriculum.
- */
-export const careerPaths = [
-  { role: "Data Analyst", icon: "chart-bar-big", builtOn: ["Excel", "SQL", "Python & pandas", "Power BI", "Tableau"] },
-  { role: "Business Analyst", icon: "presentation", builtOn: ["Excel", "Power BI dashboards", "Tableau", "Gen AI reporting"] },
-  { role: "Data Scientist", icon: "brain", builtOn: ["Statistics & maths", "Python", "R", "Machine learning"] },
-  { role: "Machine Learning Specialist", icon: "cpu", builtOn: ["Model building", "Model fine tuning", "Hyper parameter tuning"] },
-  { role: "AI Specialist", icon: "sparkles", builtOn: ["Prompt engineering", "Gen AI in analytics pipelines", "Decision support"] },
 ];
 
 /**
@@ -685,7 +671,7 @@ export const salaryUae = {
     "Independent UAE market ranges, shown for context only. Not an SMEC Technologies figure and not a guarantee of employment or earnings.",
 };
 
-/** Career roadmap – brochure page 18 (7 steps). */
+/** Career roadmap – brochure page 18 (7 steps). Not currently shown on the page. */
 export const careerRoadmap = [
   "Not Sure What to Do Next? We'll Guide You",
   "Choose SMEC - Your Career Partner",
@@ -741,6 +727,7 @@ export const companies = [
 /**
  * Accreditations & approvals – listed on the existing SMEC course website.
  * The NSDC mark and "25 Years of Excellence" also appear on the brochure cover.
+ * Not currently shown as a section; the hero names two of them.
  */
 export const accreditations = [
   {
@@ -831,7 +818,7 @@ export const faqs = [
   },
   {
     q: "What job roles can I target after completion?",
-    // Aligned with `careerPaths` — the roles this curriculum supports.
+    // Only the roles from `jobRoles` that this curriculum actually supports.
     a: "The programme builds skills for roles such as Data Analyst, Business Analyst, Data Scientist, Machine Learning Specialist and AI Specialist.",
   },
   {
@@ -866,10 +853,8 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Course", href: "#course" },
-  { label: "About", href: "#about" },
-  { label: "Why SMEC", href: "#why" },
   { label: "Curriculum", href: "#curriculum" },
+  { label: "Why SMEC", href: "#why" },
   { label: "Career", href: "#career" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#enquire" },
@@ -918,10 +903,6 @@ export const media = {
   about: {
     id: "7984741",
     alt: "A man and a woman in traditional Gulf dress working together with a laptop and tablet in a bright modern office",
-  },
-  careerBand: {
-    id: "7984727",
-    alt: "A team of professionals in traditional Gulf dress, men and women, working on laptops around a meeting table",
   },
   enquiry: {
     id: "8154232",

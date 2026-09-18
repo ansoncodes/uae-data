@@ -32,7 +32,7 @@ const heroSection = `
 
       <div data-hero-fade class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
         ${button({ href: "#hero-form", label: "Enquire Now", size: "lg", attrs: "data-focus-form" })}
-        ${button({ href: "#course", label: "View Course Details", variant: "outline", size: "lg" })}
+        ${button({ href: "#curriculum", label: "View Curriculum", variant: "outline", size: "lg" })}
       </div>
 
       <ul data-hero-fade class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-[13.5px] font-medium text-muted" aria-label="Recognition">

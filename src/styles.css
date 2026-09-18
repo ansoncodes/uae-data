@@ -265,38 +265,6 @@
   .module-tab .module-tab-num { transition: color 0.3s, background-color 0.3s; }
   .module-tab.is-active .module-tab-num { background: var(--color-accent) !important; color: #fff !important; }
 
-  /* Data pipeline: packets travel along each connector */
-  .pipe-track { position: relative; overflow: hidden; }
-  .pipe-packet { position: absolute; inset: 0; transform: translateX(-100%); animation: pipe-packet var(--dur, 2.8s) linear var(--delay, 0s) infinite; }
-  .pipe-packet::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 22px;
-    height: 3px;
-    margin-top: -1.5px;
-    border-radius: 9999px;
-    background: linear-gradient(90deg, transparent, var(--color-accent-300));
-    box-shadow: 0 0 12px 2px rgba(0, 113, 188, 0.6);
-  }
-  @keyframes pipe-packet { to { transform: translateX(0); } }
-  @media (max-width: 1023.98px) {
-    .pipe-track-v .pipe-packet { transform: translateY(-100%); animation-name: pipe-packet-v; }
-    .pipe-track-v .pipe-packet::after { right: auto; top: auto; bottom: 0; left: 50%; width: 3px; height: 22px; margin: 0 0 0 -1.5px; background: linear-gradient(180deg, transparent, var(--color-accent-300)); }
-    @keyframes pipe-packet-v { to { transform: translateY(0); } }
-  }
-
-  /* Code cards */
-  .code { font-family: var(--font-mono); font-size: 12.5px; line-height: 1.75; }
-  .tok-k { color: #c4a7ff; }
-  .tok-s { color: #b8e2a0; }
-  .tok-f { color: #7cc4ff; }
-  .tok-n { color: #ffcf8a; }
-  .tok-c { color: rgb(255 255 255 / 0.38); }
-  .caret { display: inline-block; width: 7px; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: var(--color-accent-300); animation: caret 1s steps(1) infinite; }
-  @keyframes caret { 50% { opacity: 0; } }
-
   /* Tools filter */
   [data-tool] { transition: opacity 0.45s var(--ease-out-expo), filter 0.45s var(--ease-out-expo), transform 0.45s var(--ease-out-expo), box-shadow 0.45s; }
   [data-tool].is-dim { opacity: 0.28; filter: grayscale(1); transform: scale(0.97); }
@@ -335,9 +303,8 @@
     .js [data-draw-x] { transform: none; }
     .js [data-shine] { display: none; }
     .animate-marquee, .animate-marquee-reverse, .animate-pulse-ring,
-    .ico-hand, .ico-bob, .ico-ping, .ico-draw, .pipe-packet, .caret { animation: none !important; }
+    .ico-hand, .ico-bob, .ico-ping, .ico-draw { animation: none !important; }
     .ico-draw { stroke-dashoffset: 0; }
-    .pipe-packet { display: none; }
     html { scroll-behavior: auto; }
   }
 }

@@ -168,15 +168,6 @@
     );
   }
 
-  /* ------------------------------------------------------------ parallax */
-  if (motion && hasST) {
-    $$("[data-parallax]").forEach((el) => {
-      const d = +el.dataset.parallax || 30;
-      const trigger = el.closest("[data-parallax-trigger]") || el;
-      gsap.fromTo(el, { y: -d }, { y: d, ease: "none", scrollTrigger: { trigger, start: "top bottom", end: "bottom top", scrub: true } });
-    });
-  }
-
   /* ------------------------------------------------------------ desktop-only scroll choreography */
   const journey = $("[data-journey]");
   const journeySteps = journey ? $$("[data-journey-step]", journey) : [];
@@ -329,16 +320,6 @@
   onceInView($("[data-milestones]"), (el) => {
     if (motion) gsap.fromTo($$("[data-milestone]", el), { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.6, ease: EASE, stagger: 0.09, delay: 0.1, clearProps: "transform" });
   });
-
-  // Code cards "type" in line by line.
-  if (motion) {
-    $$("[data-typing]").forEach((pre) => {
-      const lines = $$(".code-line", pre);
-      if (!lines.length) return;
-      gsap.set(lines, { clipPath: "inset(0 100% 0 0)" });
-      onceInView(pre, () => gsap.to(lines, { clipPath: "inset(0 0% 0 0)", duration: 0.7, ease: "steps(26)", stagger: 0.32, delay: 0.25 }));
-    });
-  }
 
   /* ------------------------------------------------------------ tools filter */
   const filters = $$("[data-tool-filter]");

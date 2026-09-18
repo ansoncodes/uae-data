@@ -27,3 +27,6 @@ desktop.ini
 
 # Build output (Vercel)
 dist/
+
+# Local snapshot of the deployed version (see backup/remote-aed2126/RESTORE.md)
+/backup/

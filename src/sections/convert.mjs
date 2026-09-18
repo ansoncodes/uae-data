@@ -231,10 +231,8 @@ const socialIcons = {
 };
 
 const courseLinks = [
-  { label: "Course Snapshot", href: "#course" },
-  { label: "What You Will Learn", href: "#learn" },
   { label: "Curriculum", href: "#curriculum" },
-  { label: "Practical Learning", href: "#projects" },
+  { label: "What You Will Learn", href: "#learn" },
   { label: "Tools & Technologies", href: "#tools" },
   { label: "Career Outcomes", href: "#career" },
   { label: "Certification", href: "#certification" },

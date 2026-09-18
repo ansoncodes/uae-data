@@ -8,7 +8,7 @@ const check = (cls = "text-accent") =>
 const stages = learnJourney.stages;
 
 const journey = `
-<section id="learn" class="section-y relative bg-white">
+<section id="learn" class="section-y relative bg-surface">
   <div class="container-x">
     <div class="grid gap-8 lg:grid-cols-12 lg:items-end">
       <div class="lg:col-span-7">
@@ -33,7 +33,7 @@ const journey = `
             <h3 class="journey-verb font-display text-[30px] font-bold leading-none tracking-[-0.045em] text-ink">${esc(s.verb)}</h3>
             <p class="mt-2 font-mono text-[11.5px] font-medium uppercase tracking-[0.14em] text-accent">${esc(s.sub)}</p>
             <div class="mt-5 flex flex-wrap items-center gap-2 lg:justify-center" aria-hidden="true">
-              ${s.tools.map((t) => `<span class="inline-flex size-9 items-center justify-center rounded-xl bg-surface p-2 ring-1 ring-line">${toolMark(t)}</span>`).join("")}
+              ${s.tools.map((t) => `<span class="inline-flex size-9 items-center justify-center rounded-xl bg-white p-2 ring-1 ring-line">${toolMark(t)}</span>`).join("")}
             </div>
           </div>
           <ul class="mt-5 space-y-2.5">
@@ -213,4 +213,5 @@ const curriculumSection = `
   </div>
 </section>`;
 
-export const learnBlock = `${journey}${curriculumSection}`;
+export const journeyBlock = journey;
+export const curriculumBlock = curriculumSection;
