@@ -33,7 +33,7 @@ export const header = `
   <nav aria-label="Mobile" class="container-x relative mt-4 flex flex-1 flex-col overflow-y-auto">
     ${nav
       .map(
-        (n, i) => `<a href="${n.href}" data-menu-item class="flex items-center justify-between border-b border-white/10 py-4 font-display text-[26px] font-semibold tracking-[-0.03em]">
+        (n, i) => `<a href="${n.href}" data-menu-item class="flex items-center justify-between border-b border-white/10 py-4 font-display text-[22px] font-semibold tracking-[-0.03em]">
       <span>${esc(n.label)}</span><span class="font-mono text-[11px] text-white/40">${pad2(i + 1)}</span>
     </a>`,
       )

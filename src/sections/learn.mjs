@@ -17,7 +17,7 @@ const journey = `
       <p data-reveal data-delay="0.1" class="lede text-muted lg:col-span-5">By the end of the course you will collect, analyse, visualise, predict and automate — the complete analytics &amp; ML journey, from data to prediction.</p>
     </div>
 
-    <div data-journey class="relative mt-16 lg:mt-24">
+    <div data-journey class="relative mt-10 lg:mt-14">
       <div class="absolute left-[10%] right-[10%] top-7 hidden h-px bg-line-strong lg:block" aria-hidden="true">
         <div data-journey-line data-draw-x class="h-full bg-gradient-to-r from-brand via-accent to-brand"></div>
       </div>
@@ -30,7 +30,7 @@ const journey = `
             return `<li data-journey-step class="journey-step relative pl-20 lg:pl-0">
           <span class="journey-node absolute left-0 top-0 z-10 inline-flex size-14 items-center justify-center rounded-full border border-line-strong bg-white font-mono text-[14px] font-semibold text-muted lg:relative lg:mx-auto lg:flex">${pad2(i + 1)}</span>
           <div class="lg:mt-8 lg:text-center">
-            <h3 class="journey-verb font-display text-[30px] font-bold leading-none tracking-[-0.045em] text-ink">${esc(s.verb)}</h3>
+            <h3 class="journey-verb font-display text-[26px] font-bold leading-none tracking-[-0.045em] text-ink">${esc(s.verb)}</h3>
             <p class="mt-2 font-mono text-[11.5px] font-medium uppercase tracking-[0.14em] text-accent">${esc(s.sub)}</p>
             <div class="mt-5 flex flex-wrap items-center gap-2 lg:justify-center" aria-hidden="true">
               ${s.tools.map((t) => `<span class="inline-flex size-9 items-center justify-center rounded-xl bg-white p-2 ring-1 ring-line">${toolMark(t)}</span>`).join("")}
@@ -45,8 +45,8 @@ const journey = `
       </ol>
     </div>
 
-    <div data-reveal class="mt-16 flex flex-col gap-6 rounded-[28px] bg-ink p-7 text-white sm:p-9 lg:mt-20 lg:flex-row lg:items-center lg:justify-between">
-      <p class="font-display text-[20px] font-semibold tracking-[-0.02em]">Throughout the programme</p>
+    <div data-reveal class="mt-12 flex flex-col gap-6 rounded-[28px] bg-ink p-7 text-white sm:p-9 lg:mt-20 lg:flex-row lg:items-center lg:justify-between">
+      <p class="font-display text-[17.5px] font-semibold tracking-[-0.02em]">Throughout the programme</p>
       <ul class="flex flex-col gap-3 lg:flex-row lg:gap-10">
         ${learnJourney.alwaysOutcomes
           .map((o) => `<li class="flex gap-2.5 text-[15px] leading-relaxed text-white/75">${check("text-accent")}<span>${esc(course.outcomes[o])}</span></li>`)
@@ -130,7 +130,7 @@ function moduleArticle(m, i) {
           ${m.duration ? `<span class="rounded-full bg-accent-50 px-3 py-1 text-accent ring-1 ring-accent-100">${esc(m.duration)}</span>` : ""}
         </div>
         ${m.kicker ? `<p class="mt-6 text-[14px] font-medium text-accent">${esc(m.kicker)}</p>` : ""}
-        <h3 class="${m.kicker ? "mt-1.5" : "mt-6"} font-display text-[clamp(1.6rem,2.5vw,2.35rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink">${esc(m.title)}</h3>
+        <h3 class="${m.kicker ? "mt-1.5" : "mt-6"} font-display text-[clamp(1.35rem,1.9vw,1.85rem)] font-bold leading-[1.08] tracking-[-0.035em] text-ink">${esc(m.title)}</h3>
         <p class="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-muted">${esc(m.summary)}</p>
         <div class="mt-6 h-1 overflow-hidden rounded-full bg-line" aria-hidden="true"><div class="h-full rounded-full bg-gradient-to-r from-accent to-brand" style="width:${pct}%"></div></div>
 
@@ -172,7 +172,7 @@ const curriculumSection = `
       </ul>
     </div>
 
-    <div data-curriculum data-reveal class="mt-14 grid gap-8 lg:mt-20 lg:grid-cols-12 lg:gap-10">
+    <div data-curriculum data-reveal class="mt-10 grid gap-8 lg:mt-14 lg:grid-cols-12 lg:gap-10">
       <aside class="hidden lg:col-span-4 lg:block">
         <div class="sticky top-24">
           <div class="flex items-center justify-between font-mono text-[11.5px] uppercase tracking-[0.16em] text-muted">

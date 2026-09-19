@@ -10,11 +10,11 @@ const careerSection = `
         <div class="flex flex-wrap items-start justify-between gap-4">
           <div>
             <p class="eyebrow inline-flex items-center gap-2 text-accent">${flagUae("h-[11px] w-[17px]")} ${esc(salaryUae.label)}</p>
-            <h3 class="mt-3 font-display text-[clamp(1.5rem,2.3vw,1.9rem)] font-bold tracking-[-0.03em] text-ink">${esc(salaryUae.heading)}</h3>
+            <h3 class="mt-3 font-display text-[clamp(1.3rem,1.7vw,1.6rem)] font-bold tracking-[-0.03em] text-ink">${esc(salaryUae.heading)}</h3>
           </div>
           <span class="rounded-full bg-surface px-3 py-1 text-[12px] font-medium text-muted ring-1 ring-line">${esc(salaryUae.unit)}</span>
         </div>
-        <div data-bars class="mt-20 flex h-52 items-end gap-2 sm:gap-4">
+        <div data-bars class="mt-16 flex h-44 items-end gap-2 sm:gap-4">
           ${salaryUae.steps
             .map(
               (s) => `<div class="flex h-full flex-1 flex-col justify-end">
@@ -44,7 +44,7 @@ const careerSection = `
 
       <div data-reveal data-delay="0.1" class="bg-navy-soft relative overflow-hidden rounded-[28px] p-6 text-white sm:p-9 lg:col-span-5">
         <p class="eyebrow text-accent-300">Data Analyst</p>
-        <h3 class="mt-3 font-display text-[clamp(1.5rem,2.3vw,1.9rem)] font-bold tracking-[-0.03em]">Your path with SMEC</h3>
+        <h3 class="mt-3 font-display text-[clamp(1.3rem,1.7vw,1.6rem)] font-bold tracking-[-0.03em]">Your path with SMEC</h3>
         <ol data-milestones class="relative mt-8">
           ${milestones
             .map((m, i) => {
@@ -66,7 +66,7 @@ const careerSection = `
 const certificationSection = `
 <section id="certification" class="section-y bg-surface">
   <div class="container-x">
-    <div class="grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
+    <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
       <div class="lg:col-span-6">
         <div data-cert class="relative [perspective:1600px]">
           <div data-tilt class="relative aspect-[1.414] overflow-hidden rounded-xl border border-line bg-white shadow-lift transition-transform duration-300 ease-out [transform-style:preserve-3d]">
@@ -143,7 +143,7 @@ const testimonialsSection = realTestimonials.length
         .map(
           (t) => `<figure data-reveal-item class="rounded-[28px] bg-white p-7 ring-1 ring-line sm:p-9">
         ${icon("quote", "size-8 text-accent")}
-        <blockquote class="mt-5 font-display text-[18px] font-medium leading-[1.5] tracking-[-0.01em] text-ink">${esc(t.quote)}</blockquote>
+        <blockquote class="mt-5 font-display text-[16.5px] font-medium leading-[1.5] tracking-[-0.01em] text-ink">${esc(t.quote)}</blockquote>
         <figcaption class="mt-7 flex items-center gap-3">
           <span class="inline-flex size-11 items-center justify-center rounded-full bg-ink font-display text-[13px] font-bold text-white">${initials(t.name)}</span>
           <span><span class="block font-display text-[15px] font-semibold text-ink">${esc(t.name)}</span><span class="block text-[13.5px] text-muted">${esc(t.role)}</span></span>

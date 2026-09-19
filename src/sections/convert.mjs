@@ -4,7 +4,7 @@ import { button, esc, flagUae, icon, logoImg, pad2, photo, sectionHeader } from 
 /* ------------------------------------------------------------------ faq */
 const faqSection = `
 <section id="faq" class="section-y bg-white">
-  <div class="container-x grid gap-12 lg:grid-cols-12 lg:gap-16">
+  <div class="container-x grid gap-10 lg:grid-cols-12 lg:gap-12">
     <div class="lg:col-span-5">
       <div class="lg:sticky lg:top-28">
         ${sectionHeader({ eyebrow: "FAQ", title: "Frequently asked questions", description: "Quick answers about eligibility, duration, tools, projects and certification." })}
@@ -27,7 +27,7 @@ const faqSection = `
             return `<div data-acc-item class="border-b border-line ${open ? "is-open" : ""}">
           <button type="button" data-acc-trigger aria-expanded="${open}" aria-controls="faq-${i}" class="group flex w-full items-start gap-5 py-6 text-left">
             <span class="mt-1.5 w-7 shrink-0 font-mono text-[12px] text-muted-2">${pad2(i + 1)}</span>
-            <span class="flex-1 font-display text-[17px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-accent sm:text-[18.5px]">${esc(f.q)}</span>
+            <span class="flex-1 font-display text-[17px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-accent sm:text-[17px]">${esc(f.q)}</span>
             <span class="acc-icon inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink">${icon("plus", "size-4")}</span>
           </button>
           <div id="faq-${i}" data-acc-panel ${open ? "" : "hidden"}>
@@ -84,7 +84,7 @@ export function enquiryFormCard(p, formName, { id = "", headingLevel = "h2" } = 
 
     <div>
       <span class="inline-block rounded-md bg-brand-50 px-2.5 py-1 font-display text-[11.5px] font-semibold tracking-[0.01em] text-brand">${esc(heroForm.pill)}</span>
-      <${H} class="mt-3 font-display text-[1.3rem] font-bold tracking-[-0.02em] text-ink">${esc(heroForm.heading)}</${H}>
+      <${H} class="mt-3 font-display text-[1.15rem] font-bold tracking-[-0.02em] text-ink">${esc(heroForm.heading)}</${H}>
       <p class="mt-2 text-[13.5px] leading-relaxed text-muted">${esc(heroForm.text)}</p>
     </div>
 
@@ -136,7 +136,7 @@ export function enquiryFormCard(p, formName, { id = "", headingLevel = "h2" } = 
       <span data-burst class="burst absolute inset-0" aria-hidden="true">${"<span></span>".repeat(10)}</span>
       <svg viewBox="0 0 48 48" class="size-9 text-accent" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path data-success-check d="M12 25l8 8 16-18"></path></svg>
     </div>
-    <h3 class="mt-6 font-display text-[22px] font-bold tracking-[-0.03em] text-ink">Thank you<span data-success-name></span>.</h3>
+    <h3 class="mt-6 font-display text-[19px] font-bold tracking-[-0.03em] text-ink">Thank you<span data-success-name></span>.</h3>
     <p class="mt-3 max-w-xs text-[14px] leading-relaxed text-muted">Your request has been received. An SMEC advisor will contact you shortly with course details and next steps.</p>
     <div class="mt-7 flex flex-col items-center gap-2">
       ${button({ href: site.whatsapp, label: "Continue on WhatsApp", variant: "outline", arrow: false, attrs: 'target="_blank" rel="noopener noreferrer"', lead: icon("message-circle", "size-4 text-accent") })}
@@ -162,7 +162,7 @@ const enquirySection = `
         <div class="absolute -right-24 -top-24 size-[420px] rounded-full bg-accent/25 blur-[120px]"></div>
       </div>
 
-      <div class="grid items-center gap-12 p-6 sm:p-10 lg:grid-cols-2 lg:gap-12 lg:p-14 xl:grid-cols-[minmax(0,1fr)_500px] xl:gap-16 xl:p-16">
+      <div class="grid items-center gap-10 p-6 sm:p-9 lg:grid-cols-2 lg:gap-10 lg:p-12 xl:grid-cols-[minmax(0,1fr)_470px] xl:gap-12 xl:p-14">
         <div>
           <p data-reveal class="eyebrow flex items-center gap-3 text-accent-300"><span class="h-px w-8 bg-accent-300/60" aria-hidden="true"></span>${esc(enquiry.eyebrow)}</p>
           <h2 data-reveal class="h-section mt-5 text-white">${esc(enquiry.heading)}</h2>
@@ -211,7 +211,7 @@ const finalCta = `
         SMEC Technologies <span class="text-white/30" aria-hidden="true">|</span>
         <span class="inline-flex items-center gap-2">${flagUae("h-[11px] w-[17px] ring-white/25")} UAE</span>
       </p>
-      <h2 class="mx-auto mt-7 max-w-4xl font-display text-[clamp(2.4rem,5.6vw,5rem)] font-bold leading-[0.98] tracking-[-0.045em]">Ready to become a <span class="text-gradient">data-driven professional?</span></h2>
+      <h2 class="mx-auto mt-7 max-w-4xl font-display text-[clamp(1.9rem,3.6vw,3.2rem)] font-bold leading-[0.98] tracking-[-0.045em]">Ready to become a <span class="text-gradient">data-driven professional?</span></h2>
       <p class="lede mx-auto mt-7 max-w-2xl text-white/70">This program is a great place to start your data analytics journey. Learn from experienced instructors through live interactive sessions and build your hands-on skills through projects and integrated labs.</p>
       <div class="mt-10 flex justify-center">
         ${button({ href: "#enquire", label: "Enquire Now", size: "lg" })}
@@ -244,7 +244,7 @@ const footerLink = (l) => `<li><a href="${l.href}" class="text-white/70 transiti
 export const footer = `
 <footer class="relative bg-navy-950 text-white">
   <div class="container-x relative pb-10 pt-16 lg:pt-20">
-    <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
+    <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
       <div class="lg:col-span-4">
         <a href="#top" aria-label="SMEC Technologies – home" class="inline-flex shrink-0 items-center">${logoImg("light", 36, 'loading="lazy"')}</a>
         <p class="mt-6 max-w-sm text-[14.5px] leading-relaxed text-white/60">${esc(about.paragraphs[0])}</p>
@@ -275,7 +275,7 @@ export const footer = `
         <div class="mt-8">${button({ href: "#enquire", label: "Enquire Now", size: "sm" })}</div>
       </div>
     </div>
-    <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© <span data-year>${new Date().getFullYear()}</span> ${esc(site.name)}. All rights reserved.</p>
       <p class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
         <span class="size-1.5 rounded-full bg-accent-300" aria-hidden="true"></span>${esc(site.tagline)}
