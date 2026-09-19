@@ -10,20 +10,20 @@ const whySection = `
       <div class="lg:col-span-7">
         ${sectionHeader({ eyebrow: "Why SMEC", title: esc(about.whyLearnHeading), tone: "dark" })}
       </div>
-      <p data-reveal data-delay="0.1" class="text-[15.5px] leading-[1.75] text-white/60 lg:col-span-5">${esc(about.whyLearn)}</p>
+      <p data-reveal data-delay="0.1" class="text-[14.5px] leading-[1.75] text-white/60 lg:col-span-5">${esc(about.whyLearn)}</p>
     </div>
 
-    <div data-reveal-group data-stagger="0.08" class="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-6">
+    <div data-reveal-group data-stagger="0.08" class="mt-8 grid gap-5 sm:grid-cols-2 lg:mt-10 lg:grid-cols-3 lg:gap-6">
       ${whySmec
         .map(
-          (c, i) => `<div data-why-col="${i % 3}" class="${i % 3 === 1 ? "lg:mt-10" : i % 3 === 2 ? "lg:mt-20" : ""}">
-        <article data-reveal-item data-spotlight class="spotlight group h-full rounded-[28px] bg-white/[0.04] p-7 ring-1 ring-white/10 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:bg-white/[0.07] hover:ring-accent/40 sm:p-8 lg:p-9">
+          (c, i) => `<div data-why-col="${i % 3}" class="${i % 3 === 1 ? "lg:mt-8" : i % 3 === 2 ? "lg:mt-14" : ""}">
+        <article data-reveal-item data-spotlight class="spotlight group h-full rounded-[20px] bg-white/[0.04] p-6 ring-1 ring-white/10 transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:bg-white/[0.07] hover:ring-accent/40 sm:p-6 lg:p-7">
           <div class="flex items-start justify-end">
-            <span class="inline-flex size-12 items-center justify-center rounded-2xl bg-white/[0.06] text-white ring-1 ring-white/10 transition-all duration-500 ease-out-expo group-hover:bg-accent group-hover:text-white group-hover:ring-accent">${icon(c.icon, "size-5")}</span>
+            <span class="inline-flex size-10 items-center justify-center rounded-2xl bg-white/[0.06] text-white ring-1 ring-white/10 transition-all duration-500 ease-out-expo group-hover:bg-accent group-hover:text-white group-hover:ring-accent">${icon(c.icon, "size-5")}</span>
           </div>
-          <p class="text-outline -mt-4 font-display text-[56px] font-bold leading-none tracking-[-0.06em] text-white/15 transition-colors duration-500 group-hover:text-accent-300/70" aria-hidden="true">${pad2(i + 1)}</p>
-          <h3 class="mt-6 font-display text-[19.5px] font-semibold tracking-[-0.025em] text-white">${esc(c.title)}</h3>
-          <p class="mt-3 text-[15px] leading-relaxed text-white/60">${esc(c.text)}</p>
+          <p class="text-outline -mt-4 font-display text-[44px] font-bold leading-none tracking-[-0.06em] text-white/15 transition-colors duration-500 group-hover:text-accent-300/70" aria-hidden="true">${pad2(i + 1)}</p>
+          <h3 class="mt-6 font-display text-[17.5px] font-semibold tracking-[-0.025em] text-white">${esc(c.title)}</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-white/60">${esc(c.text)}</p>
         </article>
       </div>`,
         )

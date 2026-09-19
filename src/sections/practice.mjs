@@ -13,20 +13,20 @@ const experienceSection = `
       </div>
       <p data-reveal data-delay="0.1" class="lede text-muted lg:col-span-5">Career-focused, industry-ready training, with expert-led mentorship by industry professionals at every stage.</p>
     </div>
-    <div data-reveal-group data-stagger="0.1" class="mt-10 grid gap-6 lg:mt-14 lg:grid-cols-3">
+    <div data-reveal-group data-stagger="0.1" class="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-3">
       ${learningExperience
         .map(
-          (item, i) => `<article data-reveal-item class="group flex flex-col overflow-hidden rounded-[28px] bg-surface ring-1 ring-line transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:bg-white hover:shadow-lift">
+          (item, i) => `<article data-reveal-item class="group flex flex-col overflow-hidden rounded-[20px] bg-surface ring-1 ring-line transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:bg-white hover:shadow-lift">
         <div class="relative aspect-[4/3] overflow-hidden">
           ${photo(expImages[item.image], { sizes: "(min-width: 1024px) 30vw, 100vw", ratio: 4 / 3, widths: [480, 720, 960], cls: "absolute inset-0 size-full object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.05]" })}
           <span class="absolute left-4 top-4 rounded-full bg-navy-950/60 px-3 py-1 font-mono text-[11px] text-white backdrop-blur-md">${pad2(i + 1)}</span>
         </div>
-        <div class="flex flex-1 flex-col p-6 sm:p-7">
+        <div class="flex flex-1 flex-col p-5 sm:p-6">
           <p class="eyebrow text-accent">${esc(item.eyebrow)}</p>
-          <h3 class="mt-3 font-display text-[18px] font-semibold leading-snug tracking-[-0.02em] text-ink">${esc(item.title)}</h3>
-          <p class="mt-3 text-[14.5px] leading-relaxed text-muted">${esc(item.text)}</p>
+          <h3 class="mt-3 font-display text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">${esc(item.title)}</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-muted">${esc(item.text)}</p>
           <ul class="mt-5 space-y-2">
-            ${item.points.map((p) => `<li class="flex items-start gap-2.5 text-[14px] text-ink/85"><span class="mt-[3px] inline-flex size-[18px] shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent">${icon("check", "size-3", 'stroke-width="3"')}</span>${esc(p)}</li>`).join("\n            ")}
+            ${item.points.map((p) => `<li class="flex items-start gap-2.5 text-[13.5px] text-ink/85"><span class="mt-[3px] inline-flex size-[18px] shrink-0 items-center justify-center rounded-full bg-accent-50 text-accent">${icon("check", "size-3", 'stroke-width="3"')}</span>${esc(p)}</li>`).join("\n            ")}
           </ul>
         </div>
       </article>`,
@@ -58,13 +58,13 @@ const toolsSection = `
       </div>
     </div>
 
-    <ul data-reveal-group data-stagger="0.035" class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+    <ul data-reveal-group data-stagger="0.035" class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       ${tools
         .map(
-          (t) => `<li data-reveal-item data-tool data-cat="${groupsFor(t.icon)}" class="group flex flex-col items-center gap-4 rounded-[22px] bg-white p-5 text-center ring-1 ring-line hover:-translate-y-1 hover:shadow-lift hover:ring-accent/50">
-        <span class="inline-flex size-14 items-center justify-center rounded-2xl bg-surface p-3 transition-transform duration-500 ease-out-expo group-hover:scale-105">${toolMark(t.icon)}</span>
+          (t) => `<li data-reveal-item data-tool data-cat="${groupsFor(t.icon)}" class="group flex flex-col items-center gap-4 rounded-[16px] bg-white p-5 text-center ring-1 ring-line hover:-translate-y-1 hover:shadow-lift hover:ring-accent/50">
+        <span class="inline-flex size-12 items-center justify-center rounded-2xl bg-surface p-3 transition-transform duration-500 ease-out-expo group-hover:scale-105">${toolMark(t.icon)}</span>
         <span>
-          <span class="block font-display text-[14.5px] font-semibold text-ink">${esc(t.short)}</span>
+          <span class="block font-display text-[14px] font-semibold text-ink">${esc(t.short)}</span>
           ${t.short !== t.name ? `<span class="mt-0.5 block text-[11.5px] leading-snug text-muted-2">${esc(t.name)}</span>` : ""}
         </span>
       </li>`,

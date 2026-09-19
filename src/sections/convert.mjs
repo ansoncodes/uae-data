@@ -4,13 +4,13 @@ import { button, esc, flagUae, icon, logoImg, pad2, photo, sectionHeader } from 
 /* ------------------------------------------------------------------ faq */
 const faqSection = `
 <section id="faq" class="section-y bg-white">
-  <div class="container-x grid gap-10 lg:grid-cols-12 lg:gap-12">
+  <div class="container-x grid gap-8 lg:grid-cols-12 lg:gap-9">
     <div class="lg:col-span-5">
       <div class="lg:sticky lg:top-28">
         ${sectionHeader({ eyebrow: "FAQ", title: "Frequently asked questions", description: "Quick answers about eligibility, duration, tools, projects and certification." })}
-        <div data-reveal data-delay="0.1" class="mt-8 rounded-[24px] bg-surface p-6 ring-1 ring-line sm:p-7">
-          <p class="font-display text-[17px] font-semibold tracking-[-0.01em] text-ink">Still have questions?</p>
-          <p class="mt-1.5 text-[14px] leading-relaxed text-muted">Talk to an SMEC advisor about the programme, batches and fees.</p>
+        <div data-reveal data-delay="0.1" class="mt-8 rounded-[18px] bg-surface p-5 ring-1 ring-line sm:p-6">
+          <p class="font-display text-[15.5px] font-semibold tracking-[-0.01em] text-ink">Still have questions?</p>
+          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted">Talk to an SMEC advisor about the programme, batches and fees.</p>
           <div class="mt-5 flex flex-wrap gap-2.5">
             ${button({ href: "#enquire", label: "Talk to an Advisor", variant: "dark", size: "sm" })}
             ${button({ href: site.whatsapp, label: "WhatsApp", variant: "outline", size: "sm", arrow: false, attrs: 'target="_blank" rel="noopener noreferrer"', lead: icon("message-circle", "size-4 text-accent") })}
@@ -27,11 +27,11 @@ const faqSection = `
             return `<div data-acc-item class="border-b border-line ${open ? "is-open" : ""}">
           <button type="button" data-acc-trigger aria-expanded="${open}" aria-controls="faq-${i}" class="group flex w-full items-start gap-5 py-6 text-left">
             <span class="mt-1.5 w-7 shrink-0 font-mono text-[12px] text-muted-2">${pad2(i + 1)}</span>
-            <span class="flex-1 font-display text-[17px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-accent sm:text-[17px]">${esc(f.q)}</span>
+            <span class="flex-1 font-display text-[15.5px] font-semibold leading-snug tracking-[-0.01em] text-ink transition-colors duration-300 group-hover:text-accent sm:text-[15.5px]">${esc(f.q)}</span>
             <span class="acc-icon inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink">${icon("plus", "size-4")}</span>
           </button>
           <div id="faq-${i}" data-acc-panel ${open ? "" : "hidden"}>
-            <p class="pb-7 pl-12 pr-2 text-[15.5px] leading-[1.75] text-muted sm:pr-14">${esc(f.a)}</p>
+            <p class="pb-7 pl-12 pr-2 text-[14.5px] leading-[1.75] text-muted sm:pr-14">${esc(f.a)}</p>
           </div>
         </div>`;
           })
@@ -55,7 +55,7 @@ const dialCodes = [
 ];
 
 const INPUT =
-  "h-11 w-full rounded-2xl border border-line bg-white px-4 text-[14.5px] text-ink placeholder:text-muted-2 outline-none transition-all duration-300 hover:border-line-strong focus:border-accent focus:ring-4 focus:ring-accent/10 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-4 aria-[invalid=true]:ring-red-500/10";
+  "h-10 w-full rounded-xl border border-line bg-white px-3.5 text-[13.5px] text-ink placeholder:text-muted-2 outline-none transition-all duration-300 hover:border-line-strong focus:border-accent focus:ring-4 focus:ring-accent/10 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-4 aria-[invalid=true]:ring-red-500/10";
 const LABEL =
   "mb-1.5 block font-display text-[11.5px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors duration-300 group-focus-within:text-accent";
 const req = '<span class="text-red-500" aria-hidden="true">*</span>';
@@ -72,7 +72,7 @@ const field = (label, id, control) => `<div class="group">
  */
 export function enquiryFormCard(p, formName, { id = "", headingLevel = "h2" } = {}) {
   const H = headingLevel;
-  return `<div ${id ? `id="${id}" ` : ""}data-form-block class="relative rounded-3xl bg-white p-6 text-ink shadow-[0_34px_74px_-32px_rgba(11,16,38,0.38)] ring-1 ring-line/70 sm:p-7">
+  return `<div ${id ? `id="${id}" ` : ""}data-form-block class="relative rounded-3xl bg-white p-5 text-ink shadow-[0_34px_74px_-32px_rgba(11,16,38,0.38)] ring-1 ring-line/70 sm:p-6">
   <form data-enquiry-form data-form-name="${formName}" data-endpoint="" novalidate class="space-y-3.5">
     <div class="flex items-center gap-3 rounded-xl bg-brand-50 px-4 py-3 ring-1 ring-brand-100">
       <span class="relative flex size-2 shrink-0">
@@ -131,13 +131,13 @@ export function enquiryFormCard(p, formName, { id = "", headingLevel = "h2" } = 
   </form>
 
   <div data-form-success class="flex min-h-[440px] flex-col items-center justify-center text-center" role="status" hidden>
-    <div class="relative flex size-20 items-center justify-center rounded-full bg-accent-50">
+    <div class="relative flex size-16 items-center justify-center rounded-full bg-accent-50">
       <span data-success-ring class="absolute inset-0 rounded-full border-2 border-accent opacity-0"></span>
       <span data-burst class="burst absolute inset-0" aria-hidden="true">${"<span></span>".repeat(10)}</span>
       <svg viewBox="0 0 48 48" class="size-9 text-accent" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path data-success-check d="M12 25l8 8 16-18"></path></svg>
     </div>
-    <h3 class="mt-6 font-display text-[19px] font-bold tracking-[-0.03em] text-ink">Thank you<span data-success-name></span>.</h3>
-    <p class="mt-3 max-w-xs text-[14px] leading-relaxed text-muted">Your request has been received. An SMEC advisor will contact you shortly with course details and next steps.</p>
+    <h3 class="mt-6 font-display text-[17px] font-bold tracking-[-0.03em] text-ink">Thank you<span data-success-name></span>.</h3>
+    <p class="mt-3 max-w-xs text-[13.5px] leading-relaxed text-muted">Your request has been received. An SMEC advisor will contact you shortly with course details and next steps.</p>
     <div class="mt-7 flex flex-col items-center gap-2">
       ${button({ href: site.whatsapp, label: "Continue on WhatsApp", variant: "outline", arrow: false, attrs: 'target="_blank" rel="noopener noreferrer"', lead: icon("message-circle", "size-4 text-accent") })}
       ${button({ label: "Send another request", variant: "ghost", size: "sm", arrow: false, attrs: "data-form-reset" })}
@@ -156,19 +156,19 @@ const contactPills = [
 const enquirySection = `
 <section id="enquire" class="section-y relative bg-white">
   <div class="container-x">
-    <div class="relative isolate overflow-hidden rounded-[32px] text-white lg:rounded-[44px]">
+    <div class="relative isolate overflow-hidden rounded-[24px] text-white lg:rounded-[32px]">
       <div class="bg-navy-glow absolute inset-0 -z-10" aria-hidden="true">
         <div class="pattern-arabesque absolute inset-0 [mask-image:radial-gradient(60%_60%_at_15%_20%,black,transparent)]"></div>
         <div class="absolute -right-24 -top-24 size-[420px] rounded-full bg-accent/25 blur-[120px]"></div>
       </div>
 
-      <div class="grid items-center gap-10 p-6 sm:p-9 lg:grid-cols-2 lg:gap-10 lg:p-12 xl:grid-cols-[minmax(0,1fr)_470px] xl:gap-12 xl:p-14">
+      <div class="grid items-center gap-8 p-5 sm:p-7 lg:grid-cols-2 lg:gap-8 lg:p-9 xl:grid-cols-[minmax(0,1fr)_470px] xl:gap-9 xl:p-10">
         <div>
           <p data-reveal class="eyebrow flex items-center gap-3 text-accent-300"><span class="h-px w-8 bg-accent-300/60" aria-hidden="true"></span>${esc(enquiry.eyebrow)}</p>
           <h2 data-reveal class="h-section mt-5 text-white">${esc(enquiry.heading)}</h2>
           <p data-reveal data-delay="0.05" class="lede mt-6 text-white/65">${esc(enquiry.text)}</p>
           <ul data-reveal data-delay="0.1" class="mt-8 space-y-3">
-            ${enquiry.points.map((pt) => `<li class="flex items-start gap-3 text-[15.5px] text-white/85"><span class="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-accent text-white">${icon("check", "size-3.5", 'stroke-width="3"')}</span>${esc(pt)}</li>`).join("\n            ")}
+            ${enquiry.points.map((pt) => `<li class="flex items-start gap-3 text-[14.5px] text-white/85"><span class="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full bg-accent text-white">${icon("check", "size-3.5", 'stroke-width="3"')}</span>${esc(pt)}</li>`).join("\n            ")}
           </ul>
           <div data-reveal data-delay="0.15" class="mt-8 flex flex-wrap gap-2">
             ${contactPills
@@ -177,7 +177,7 @@ const enquirySection = `
               )
               .join("\n            ")}
           </div>
-          <div data-reveal data-delay="0.2" class="relative mt-10 hidden overflow-hidden rounded-[24px] ring-1 ring-white/10 sm:block">
+          <div data-reveal data-delay="0.2" class="relative mt-8 hidden overflow-hidden rounded-[18px] ring-1 ring-white/10 sm:block">
             <div class="relative aspect-[16/7]">
               ${photo(media.enquiry, { sizes: "(min-width: 1024px) 40vw, 90vw", ratio: 16 / 7, widths: [640, 960, 1280], cls: "absolute inset-0 size-full object-cover object-[50%_30%]" })}
               <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" aria-hidden="true"></div>
@@ -204,16 +204,16 @@ const finalCta = `
     <div class="absolute -left-24 top-[-30%] size-[640px] rounded-full bg-accent/25 blur-[150px]"></div>
     <div class="absolute -right-24 bottom-[-30%] size-[600px] rounded-full bg-brand/40 blur-[150px]"></div>
   </div>
-  <div class="container-x relative py-28 text-center sm:py-36 lg:py-44">
+  <div class="container-x relative py-20 text-center sm:py-24 lg:py-28">
     <div data-reveal>
       <p class="eyebrow inline-flex items-center gap-3 text-white/70">
         <span class="size-1.5 rounded-full bg-accent-300" aria-hidden="true"></span>
         SMEC Technologies <span class="text-white/30" aria-hidden="true">|</span>
         <span class="inline-flex items-center gap-2">${flagUae("h-[11px] w-[17px] ring-white/25")} UAE</span>
       </p>
-      <h2 class="mx-auto mt-7 max-w-4xl font-display text-[clamp(1.9rem,3.6vw,3.2rem)] font-bold leading-[0.98] tracking-[-0.045em]">Ready to become a <span class="text-gradient">data-driven professional?</span></h2>
+      <h2 class="mx-auto mt-7 max-w-4xl font-display text-[clamp(1.65rem,2.9vw,2.6rem)] font-bold leading-[0.98] tracking-[-0.045em]">Ready to become a <span class="text-gradient">data-driven professional?</span></h2>
       <p class="lede mx-auto mt-7 max-w-2xl text-white/70">This program is a great place to start your data analytics journey. Learn from experienced instructors through live interactive sessions and build your hands-on skills through projects and integrated labs.</p>
-      <div class="mt-10 flex justify-center">
+      <div class="mt-8 flex justify-center">
         ${button({ href: "#enquire", label: "Enquire Now", size: "lg" })}
       </div>
       <p class="mt-9 font-mono text-[11.5px] uppercase tracking-[0.16em] text-white/50">${esc(course.duration)} course · ${esc(course.certification)}</p>
@@ -244,10 +244,10 @@ const footerLink = (l) => `<li><a href="${l.href}" class="text-white/70 transiti
 export const footer = `
 <footer class="relative bg-navy-950 text-white">
   <div class="container-x relative pb-10 pt-16 lg:pt-20">
-    <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+    <div class="grid gap-8 lg:grid-cols-12 lg:gap-8">
       <div class="lg:col-span-4">
         <a href="#top" aria-label="SMEC Technologies – home" class="inline-flex shrink-0 items-center">${logoImg("light", 36, 'loading="lazy"')}</a>
-        <p class="mt-6 max-w-sm text-[14.5px] leading-relaxed text-white/60">${esc(about.paragraphs[0])}</p>
+        <p class="mt-6 max-w-sm text-[14px] leading-relaxed text-white/60">${esc(about.paragraphs[0])}</p>
         <div class="mt-6 flex items-center gap-2">
           ${site.social
             .map(
@@ -259,15 +259,15 @@ export const footer = `
       </div>
       <div class="lg:col-span-2">
         ${footerHeading("Course")}
-        <ul class="mt-5 space-y-3 text-[14.5px]">${courseLinks.map(footerLink).join("")}</ul>
+        <ul class="mt-5 space-y-3 text-[14px]">${courseLinks.map(footerLink).join("")}</ul>
       </div>
       <div class="lg:col-span-2">
         ${footerHeading("Important links")}
-        <ul class="mt-5 space-y-3 text-[14.5px]">${nav.map(footerLink).join("")}${legal.map(footerLink).join("")}</ul>
+        <ul class="mt-5 space-y-3 text-[14px]">${nav.map(footerLink).join("")}${legal.map(footerLink).join("")}</ul>
       </div>
       <div class="lg:col-span-4">
         ${footerHeading("Contact")}
-        <ul class="mt-5 space-y-3 text-[14.5px]">
+        <ul class="mt-5 space-y-3 text-[14px]">
           <li><a href="${site.phoneHref}" class="inline-flex items-center gap-2.5 text-white/70 transition-colors hover:text-white">${icon("phone", "size-4 text-accent-300")} ${esc(site.phone)}</a></li>
           <li><a href="mailto:${site.email}" class="inline-flex items-center gap-2.5 text-white/70 transition-colors hover:text-white">${icon("mail", "size-4 text-accent-300")} ${esc(site.email)}</a></li>
           <li><a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 text-white/70 transition-colors hover:text-white">${icon("message-circle", "size-4 text-accent-300")} Chat on WhatsApp</a></li>
@@ -275,7 +275,7 @@ export const footer = `
         <div class="mt-8">${button({ href: "#enquire", label: "Enquire Now", size: "sm" })}</div>
       </div>
     </div>
-    <div class="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-8 flex flex-col gap-4 border-t border-white/10 pt-8 text-[13px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© <span data-year>${new Date().getFullYear()}</span> ${esc(site.name)}. All rights reserved.</p>
       <p class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
         <span class="size-1.5 rounded-full bg-accent-300" aria-hidden="true"></span>${esc(site.tagline)}
@@ -290,12 +290,12 @@ export const floating = `
 <div data-floating-bar class="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/90 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-8px_30px_-12px_rgba(11,16,38,0.25)] backdrop-blur-xl md:hidden">
   <div class="flex items-center gap-2.5">
     ${button({ href: "#enquire", label: "Enquire Now", cls: "flex-1" })}
-    <a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="inline-flex size-12 shrink-0 items-center justify-center rounded-full border border-line-strong text-accent transition-colors hover:bg-accent-50">${icon("message-circle", "size-5")}</a>
+    <a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-line-strong text-accent transition-colors hover:bg-accent-50">${icon("message-circle", "size-5")}</a>
   </div>
 </div>
 <div data-floating-pill class="fixed bottom-6 right-6 z-40 hidden md:block">
   <div class="flex items-center gap-1.5 rounded-full bg-white/90 p-1.5 shadow-lift ring-1 ring-line backdrop-blur-xl">
-    <a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="inline-flex size-11 items-center justify-center rounded-full text-accent transition-colors hover:bg-accent-50">${icon("message-circle", "size-5")}</a>
+    <a href="${site.whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="inline-flex size-9 items-center justify-center rounded-full text-accent transition-colors hover:bg-accent-50">${icon("message-circle", "size-5")}</a>
     ${button({ href: "#enquire", label: "Talk to an Advisor" })}
   </div>
 </div>`;

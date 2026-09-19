@@ -73,10 +73,10 @@ const BTN_VARIANTS = {
   ghost: "text-ink hover:bg-surface-2",
 };
 const BTN_SIZES = {
-  sm: "h-10 px-4 text-[13.5px]",
-  md: "h-12 px-5 text-[14.5px]",
-  lg: "h-14 px-7 text-[15.5px]",
-  form: "h-[52px] px-7 text-[15px]",
+  sm: "h-9 px-3.5 text-[13px]",
+  md: "h-10 px-4 text-[13.5px]",
+  lg: "h-12 px-6 text-[14px]",
+  form: "h-[46px] px-6 text-[14px]",
 };
 const ARROW = icon("arrow-right", "size-4 shrink-0 transition-transform duration-300 ease-out-expo group-hover:translate-x-1");
 
@@ -92,15 +92,15 @@ export function button({ href, label, variant = "primary", size = "md", arrow = 
 export function sectionHeader({ eyebrow, title, description = "", tone = "light", align = "left", cls = "", as = "h2", titleCls = "" }) {
   const dark = tone === "dark";
   const center = align === "center";
-  return `<div data-reveal class="max-w-3xl ${center ? "mx-auto text-center" : ""} ${cls}">
+  return `<div data-reveal class="max-w-2xl ${center ? "mx-auto text-center" : ""} ${cls}">
     <p class="eyebrow flex items-center gap-3 ${center ? "justify-center" : ""} ${dark ? "text-accent-300" : "text-accent"}"><span class="h-px w-8 ${dark ? "bg-accent-300/60" : "bg-accent/50"}" aria-hidden="true"></span>${esc(eyebrow)}</p>
-    <${as} class="h-section mt-5 ${dark ? "text-white" : "text-ink"} ${titleCls}">${title}</${as}>
-    ${description ? `<p class="lede mt-6 ${dark ? "text-white/65" : "text-muted"}">${description}</p>` : ""}
+    <${as} class="h-section mt-4 ${dark ? "text-white" : "text-ink"} ${titleCls}">${title}</${as}>
+    ${description ? `<p class="lede mt-4 ${dark ? "text-white/65" : "text-muted"}">${description}</p>` : ""}
   </div>`;
 }
 
 /** Infinite horizontal marquee; the duplicate group is hidden from assistive tech. */
-export function marquee(items, { reverse = false, gap = "gap-10 pr-10", cls = "" } = {}) {
+export function marquee(items, { reverse = false, gap = "gap-8 pr-10", cls = "" } = {}) {
   return `<div class="relative flex w-full overflow-hidden mask-fade-x ${cls}">
     <div class="flex w-max shrink-0 items-center ${reverse ? "animate-marquee-reverse" : "animate-marquee"}">
       <div class="flex shrink-0 items-center ${gap}">${items}</div>

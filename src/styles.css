@@ -112,19 +112,19 @@
    Utilities
    ------------------------------------------------------------------ */
 @utility container-x {
-  @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-8;
+  @apply mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8;
 }
 @utility section-y {
-  @apply py-16 sm:py-20 lg:py-24;
+  @apply py-12 sm:py-14 lg:py-18;
 }
 @utility eyebrow {
-  @apply font-mono text-[11.5px] font-medium uppercase tracking-[0.2em];
+  @apply font-mono text-[11px] font-medium uppercase tracking-[0.18em];
 }
 @utility h-section {
-  @apply font-display text-[clamp(1.85rem,2.7vw,2.5rem)] font-bold leading-[1.05] tracking-[-0.035em];
+  @apply font-display text-[clamp(1.6rem,2.3vw,2.125rem)] font-bold leading-[1.08] tracking-[-0.035em];
 }
 @utility lede {
-  @apply text-[1rem] leading-[1.65] sm:text-[1.0625rem];
+  @apply text-[0.9375rem] leading-[1.6] sm:text-[0.96875rem];
 }
 /* Gradient headline text on dark grounds. */
 @utility text-gradient {

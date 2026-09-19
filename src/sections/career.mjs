@@ -6,15 +6,15 @@ const careerSection = `
 <section id="career" class="section-y relative bg-white" aria-label="Career outcomes">
   <div class="container-x">
     <div class="grid gap-6 lg:grid-cols-12">
-      <div data-reveal class="rounded-[28px] bg-white p-6 shadow-soft ring-1 ring-line sm:p-9 lg:col-span-7">
+      <div data-reveal class="rounded-[20px] bg-white p-5 shadow-soft ring-1 ring-line sm:p-7 lg:col-span-7">
         <div class="flex flex-wrap items-start justify-between gap-4">
           <div>
             <p class="eyebrow inline-flex items-center gap-2 text-accent">${flagUae("h-[11px] w-[17px]")} ${esc(salaryUae.label)}</p>
-            <h3 class="mt-3 font-display text-[clamp(1.3rem,1.7vw,1.6rem)] font-bold tracking-[-0.03em] text-ink">${esc(salaryUae.heading)}</h3>
+            <h3 class="mt-3 font-display text-[clamp(1.15rem,1.45vw,1.35rem)] font-bold tracking-[-0.03em] text-ink">${esc(salaryUae.heading)}</h3>
           </div>
           <span class="rounded-full bg-surface px-3 py-1 text-[12px] font-medium text-muted ring-1 ring-line">${esc(salaryUae.unit)}</span>
         </div>
-        <div data-bars class="mt-16 flex h-44 items-end gap-2 sm:gap-4">
+        <div data-bars class="mt-12 flex h-44 items-end gap-2 sm:gap-4">
           ${salaryUae.steps
             .map(
               (s) => `<div class="flex h-full flex-1 flex-col justify-end">
@@ -42,9 +42,9 @@ const careerSection = `
         <p class="mt-6 text-[12px] leading-relaxed text-muted-2">${esc(salaryUae.disclaimer)} Source: <a href="${salaryUae.sourceHref}" target="_blank" rel="noopener noreferrer nofollow" class="underline decoration-line-strong underline-offset-2 transition-colors hover:text-muted">${esc(salaryUae.sourceLabel)}</a>.</p>
       </div>
 
-      <div data-reveal data-delay="0.1" class="bg-navy-soft relative overflow-hidden rounded-[28px] p-6 text-white sm:p-9 lg:col-span-5">
+      <div data-reveal data-delay="0.1" class="bg-navy-soft relative overflow-hidden rounded-[20px] p-5 text-white sm:p-7 lg:col-span-5">
         <p class="eyebrow text-accent-300">Data Analyst</p>
-        <h3 class="mt-3 font-display text-[clamp(1.3rem,1.7vw,1.6rem)] font-bold tracking-[-0.03em]">Your path with SMEC</h3>
+        <h3 class="mt-3 font-display text-[clamp(1.15rem,1.45vw,1.35rem)] font-bold tracking-[-0.03em]">Your path with SMEC</h3>
         <ol data-milestones class="relative mt-8">
           ${milestones
             .map((m, i) => {
@@ -52,7 +52,7 @@ const careerSection = `
               return `<li data-milestone class="relative flex gap-4 pb-6 last:pb-0">
             ${last ? "" : '<span class="absolute left-[15px] top-8 h-[calc(100%-16px)] w-px bg-white/20" aria-hidden="true"></span>'}
             <span class="relative z-10 inline-flex size-8 shrink-0 items-center justify-center rounded-full font-mono text-[11.5px] font-semibold ${last ? "bg-accent text-white" : "bg-white/10 text-white/85 ring-1 ring-white/20"}">${i + 1}</span>
-            <span class="pt-1.5 font-display text-[15.5px] font-semibold leading-snug ${last ? "text-accent-300" : "text-white/85"}">${esc(m)}</span>
+            <span class="pt-1.5 font-display text-[14.5px] font-semibold leading-snug ${last ? "text-accent-300" : "text-white/85"}">${esc(m)}</span>
           </li>`;
             })
             .join("\n          ")}
@@ -66,7 +66,7 @@ const careerSection = `
 const certificationSection = `
 <section id="certification" class="section-y bg-surface">
   <div class="container-x">
-    <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+    <div class="grid items-center gap-8 lg:grid-cols-12 lg:gap-9">
       <div class="lg:col-span-6">
         <div data-cert class="relative [perspective:1600px]">
           <div data-tilt class="relative aspect-[1.414] overflow-hidden rounded-xl border border-line bg-white shadow-lift transition-transform duration-300 ease-out [transform-style:preserve-3d]">
@@ -74,7 +74,7 @@ const certificationSection = `
             <div class="absolute inset-3 rounded-lg border border-brand-100" aria-hidden="true"></div>
             <div class="absolute inset-4 rounded-md border border-line" aria-hidden="true"></div>
             <div class="absolute left-0 top-0 h-1.5 w-full bg-gradient-to-r from-brand via-brand-600 to-accent" aria-hidden="true"></div>
-            <div class="relative flex h-full flex-col justify-between p-5 sm:p-9">
+            <div class="relative flex h-full flex-col justify-between p-5 sm:p-7">
               <div class="flex items-start justify-between gap-3">
                 ${logoImg("dark", 26, 'loading="lazy"')}
                 <span class="hidden shrink-0 rounded-md border border-sand/50 bg-sand-50 px-2 py-1 font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-sand sm:inline-block">Professional Certificate</span>
@@ -90,7 +90,7 @@ const certificationSection = `
                   <div class="h-px w-32 bg-ink/40"></div>
                   <p class="mt-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-muted">SMEC Technologies</p>
                 </div>
-                <div class="relative flex size-12 items-center justify-center rounded-full border-2 border-accent/50 sm:size-20">
+                <div class="relative flex size-10 items-center justify-center rounded-full border-2 border-accent/50 sm:size-16">
                   <div class="absolute inset-1.5 rounded-full border border-dashed border-accent/60"></div>
                   ${icon("shield-check", "size-6 text-accent sm:size-7")}
                 </div>
@@ -113,7 +113,7 @@ const certificationSection = `
             "Course Exam — a milestone on the Data Analyst pathway",
             "Assignments and projects are compulsory for all the students",
           ]
-            .map((t) => `<li class="flex items-start gap-3 text-[15px] text-ink/85">${icon("badge-check", "mt-0.5 size-5 shrink-0 text-accent")}${esc(t)}</li>`)
+            .map((t) => `<li class="flex items-start gap-3 text-[14px] text-ink/85">${icon("badge-check", "mt-0.5 size-5 shrink-0 text-accent")}${esc(t)}</li>`)
             .join("\n          ")}
         </ul>
       </div>
@@ -138,15 +138,15 @@ const testimonialsSection = realTestimonials.length
 <section id="testimonials" class="bg-surface pb-24 sm:pb-28 lg:pb-36">
   <div class="container-x">
     ${sectionHeader({ eyebrow: "Learners", title: "What learners say" })}
-    <div data-reveal-group data-stagger="0.08" class="mt-12 grid gap-5 md:grid-cols-2">
+    <div data-reveal-group data-stagger="0.08" class="mt-9 grid gap-5 md:grid-cols-2">
       ${realTestimonials
         .map(
-          (t) => `<figure data-reveal-item class="rounded-[28px] bg-white p-7 ring-1 ring-line sm:p-9">
+          (t) => `<figure data-reveal-item class="rounded-[20px] bg-white p-6 ring-1 ring-line sm:p-7">
         ${icon("quote", "size-8 text-accent")}
-        <blockquote class="mt-5 font-display text-[16.5px] font-medium leading-[1.5] tracking-[-0.01em] text-ink">${esc(t.quote)}</blockquote>
+        <blockquote class="mt-5 font-display text-[15px] font-medium leading-[1.5] tracking-[-0.01em] text-ink">${esc(t.quote)}</blockquote>
         <figcaption class="mt-7 flex items-center gap-3">
-          <span class="inline-flex size-11 items-center justify-center rounded-full bg-ink font-display text-[13px] font-bold text-white">${initials(t.name)}</span>
-          <span><span class="block font-display text-[15px] font-semibold text-ink">${esc(t.name)}</span><span class="block text-[13.5px] text-muted">${esc(t.role)}</span></span>
+          <span class="inline-flex size-9 items-center justify-center rounded-full bg-ink font-display text-[13px] font-bold text-white">${initials(t.name)}</span>
+          <span><span class="block font-display text-[14px] font-semibold text-ink">${esc(t.name)}</span><span class="block text-[13.5px] text-muted">${esc(t.role)}</span></span>
         </figcaption>
       </figure>`,
         )
